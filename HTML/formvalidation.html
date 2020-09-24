@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            var name=document.getElementById("uname").value;
+            var password=document.getElementById("pass").value;
+            var phone=document.getElementById("phone").value;
+
+               var pattern=/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.[0-9])))(?=.{6,})/;
+
+            if(name==""){
+
+                alert('username should not be blank');
+                document.getElementById("uname").focus();
+            }
+
+           else if(((name.length)<5) || ((name.length)>15))
+            {
+                alert('username should  be greater than 5 and less than 15');
+                document.getElementById("uname").focus();
+            }
+
+            else if(!password.match(pattern))
+                
+            {
+                alert("password must contain upper case, lower case, special character, number");
+                document.getElementById("pass").focus();
+            }
+
+            else if((isNaN(phone)) || ((phone.length)!=10))
+            {
+                alert('phone number should be a number , should not be empty and should be 10 digit');
+                document.getElementById("phone").focus();
+            }
+            else if(validateUserName())
+            {
+         
+                document.getElementById("here").innerHTML="Successfully Registered "+name;
+            }
+            else{
+
+                document.getElementById("here").innerHTML="Successfully Registered ";
+                
+            }
+        }
+
+        function validateUserName(){
+            name=document.getElementById("uname").value;
+            var namelist=["angana","tomram","ramsham"]
+
+            for(let i in namelist)
+                {
+                   if(name==namelist[i])
+                   {
+                       alert("User already exist!Enter valid username");
+                       return false;
+                   }
+                
+            }
+
+            return true;
+
+        }
+    </script>
+</head>
+<body>
+    <form id="myform">
+        Username: <input type="text" id="uname"><br><br>
+        Password: <input type="password" id="pass"><br><br>
+        Phone: <input type="text" id="phone"><br><br>
+        <input type="button" value="Register" onclick="validate()" ><br>
+    </form>
+    <div id="here"></div>
+</body>
+</html>
+
