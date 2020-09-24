@@ -1,0 +1,38 @@
+[
+    {
+        "name":"Big Chicken",
+        "city":"Mysuru",
+        "type":"nonveg",
+        "cuisine":["Indian","Chinese","italian"]
+    },
+
+    { 
+        "name":"Rasoi Ghar",
+        "city":"Bangalore",
+        "type":"veg",
+        "cuisine":["Indian","Chinese"]
+
+    },
+    {
+        "name":"Donne biriyani",
+        "city":"Mysuru",
+        "type":"nonveg",
+        "cuisine":["Indian","Chinese","korean"]
+    },
+
+    {
+        "name":"Highway18",
+        "city":"Mysuru",
+        "type":"veg",
+        "cuisine":["Indian","Chinese"]
+    },
+
+    {
+        "name":"Fish Land",
+        "city":"Mysuru",
+        "type":"nonveg",
+        "cuisine":["Indian","Chinese"]
+    }
+
+]
+
